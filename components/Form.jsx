@@ -46,7 +46,7 @@ export const Input = ({ setFormData }) => {
         keyboardType="email-address"
       />
       <View style={styles.buttonContainer}>
-        <Button title="Register" onPress={registerHandler} color="white" />
+        <Button title="Register" onPress={registerHandler} color="#590DE4" />
       </View>
     </View>
   );
@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
     borderBottomColor: "#ccc",
   },
   buttonContainer: {
-    backgroundColor: "#590DE4",
     width: "40%",
     borderRadius: 5,
     marginTop: 25,
