@@ -6,11 +6,6 @@ export const Input = ({ setFormData }) => {
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
   const registerHandler = () => {
-    console.log({
-      firstName,
-      lastName,
-      email,
-    });
     setFormData({
       firstName,
       lastName,
