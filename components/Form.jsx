@@ -1,11 +1,22 @@
 import React, { useState } from "react";
-import { View, StyleSheet, TextInput, Dimensions, Button } from "react-native";
+import {
+  View,
+  StyleSheet,
+  TextInput,
+  Dimensions,
+  Button,
+  Keyboard,
+} from "react-native";
 
 export const Input = ({ setFormData }) => {
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
   const registerHandler = () => {
+    Keyboard.dismiss();
+    setFirstName("");
+    setLastName("");
+    setEmail("");
     setFormData({
       firstName,
       lastName,
