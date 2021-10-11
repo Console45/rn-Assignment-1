@@ -1,7 +1,9 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
+import { useStore } from "../hooks";
 
-export const FormOutput = ({ formData }) => {
+export const FormOutput = () => {
+  const formData = useStore((state) => state.formData);
   return (
     <View style={styles.container}>
       {formData && (

@@ -7,11 +7,13 @@ import {
   Button,
   Keyboard,
 } from "react-native";
+import { useStore } from "../hooks/useStore";
 
-export const Input = ({ setFormData }) => {
+export const Form = ({ navigation }) => {
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
+  const setFormData = useStore((state) => state.setFormData);
   const registerHandler = () => {
     Keyboard.dismiss();
     setFirstName("");
@@ -22,6 +24,7 @@ export const Input = ({ setFormData }) => {
       lastName,
       email,
     });
+    navigation.navigate("Result");
   };
 
   return (

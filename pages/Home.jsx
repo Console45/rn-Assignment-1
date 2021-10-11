@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { View } from "react-native";
-import { Header, Input, FormOutput } from "../components";
+import { Form } from "../components";
 
-export const Home = ({}) => {
-  const [formData, setFormData] = useState();
+export const Home = ({ navigation }) => {
   return (
     <View>
-      <Header title={"Home"} />
-      <Input setFormData={setFormData} />
-      <FormOutput formData={formData} />
+      <Form navigation={navigation} />
     </View>
   );
 };
