@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button } from "react-native";
+import { View, Button, StyleSheet } from "react-native";
 import { FormOutput } from "../components";
 import { useStore } from "../hooks";
 
@@ -10,9 +10,12 @@ export const Result = ({ navigation }) => {
     navigation.goBack();
   }
   return (
-    <View>
+    <View style={styles.container}>
       <FormOutput />
       <Button title="Go back" onPress={goBack} />
     </View>
   );
 };
+const styles = StyleSheet.create({
+  container: { backgroundColor: "white", flex: 1 },
+});
